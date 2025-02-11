@@ -1,0 +1,18 @@
+.loginForm {
+    border: 2px solid rgb(113, 139, 222) !important;
+
+    
+    padding: 2rem;
+    border-radius: 0.3rem;
+    color: black;
+    
+    background-color:rgb(156, 157, 216);
+}
+.login{
+    justify-content: center !important;
+    align-items: center !important;
+    
+}
+.forget:hover{
+    text-decoration: underline;
+}

@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+    font-family: "Outfit", serif;
+}
+
+.group {
+    background-color: black;
+    color: white;
+    width: fit-content;
+    padding: 1rem !important;
+    border-radius: 10%;
+    position: relative;
+    display: "block",
+}
+
+.group:hover {
+    cursor: pointer;
+  
+}
+
+.group:hover.dropdown-menu {
+    display: block;
+    border: 2px solid red;
+
+
+}
+
+.header_hero {
+    border-radius: 2rem;
+    background-color: rgb(157, 173, 201);
+    width: fit-content;
+}
