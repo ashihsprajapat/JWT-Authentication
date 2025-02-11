@@ -17,7 +17,7 @@ export default function Header() {
                 <p className='mb-4'>
                     Let's start with a quick product tour and we will have you and running in no time!
                 </p>
-                <Button onClick={() => toast.success("fuck")} variant="contained" className='m-auto ' color="success">Get Started</Button>
+                <Button onClick={() => toast.success("well Come")} variant="contained" className='m-auto ' color="success">Get Started</Button>
             </div>
         </div>
     )

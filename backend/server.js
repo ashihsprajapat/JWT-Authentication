@@ -26,14 +26,17 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
     console.log("App is listening on port", port);
 })
+
+const url=process.env.MNGODB_URL;
 main()
 .then(()=>{
     console.log("Connect to data base ")
 })
 .catch(err => console.log(err));
 
+
 async function main() {
-    await mongoose.connect('mongodb://127.0.0.1:27017/authenication');
+    await mongoose.connect(url);
 }
 
 

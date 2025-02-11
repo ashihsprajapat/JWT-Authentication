@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import Button from '@mui/material/Button';
 import { Link } from '@mui/material';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
@@ -47,7 +47,7 @@ export default function NavBar() {
 
 
     return (
-        <div className='p-2 mt-3 border-bottom  ' style={{ display: 'flex', justifyContent: 'space-between', marginLeft: "2rem", marginRight: "2rem" }} >
+        <div className='p-2  border-bottom  ' style={{ display: 'flex', justifyContent: 'space-between', backgroundColor: "gray", justifyItems: "center", alignItems: "center" }} >
             <div>
                 <p className='fs-4  ' >
                     MERN Auth
@@ -60,18 +60,31 @@ export default function NavBar() {
                     <div className='p-2 group position-relative'  >
                         {userData.name[0].toUpperCase()}
                         <div >
-                            <ul  >
-                                {
-                                    !userData.isAccountVerify && <li
-                                        onClick={sendVerificationOTP} className='p-2' style={{ listStyle: "none" }}>
-                                        Verify Email
-                                    </li>
-                                }
 
-                                <li onClick={handleLogout} className='p-2' style={{ listStyle: "none" }}>
+                            <div>
+                                {
+                                    !userData.isAccountVerify && <>
+                                        <Button variant="text" onClick={sendVerificationOTP} >
+                                            Verify Email
+                                        </Button> <br />
+                                    </>
+
+
+                                    // <li
+                                    //     onClick={sendVerificationOTP} className='p-2' style={{ listStyle: "none" }}>
+                                    //     Verify Email
+                                    // </li>
+                                }
+                                <Button variant="text" onClick={handleLogout}>
                                     Logout
-                                </li>
-                            </ul>
+                                </Button>
+
+                                {/* <li  className='p-2' style={{ listStyle: "none" }}>
+                                    Logout
+                                </li> */}
+                            </div>
+
+
 
                         </div>
                     </div>
@@ -79,7 +92,7 @@ export default function NavBar() {
                     : <>
 
 
-                        <Button onClick={() => navigate("/login")} variant="outlined" size='small' >
+                        <Button onClick={() => navigate("/login")} variant="contained" size='small' >
                             Login <ArrowForwardIcon />
                         </Button>
                     </>
